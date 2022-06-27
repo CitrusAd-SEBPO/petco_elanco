@@ -63,20 +63,35 @@
 		text-align: center;
 		font-weight: 600;
 	}
+	
+	.section-sub-title{
+		color : #333333;
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		font-size: 16px;
+		padding : 0 0 40px;
+		text-align: center;
+		font-weight: 500;
+		margin-top: -20px;
+	}
 
 
 	/* Top Hero */
-	.brand-page-section__top-hero{
+	/* .brand-page-section__top-hero{
 		background-image: url("https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Top_Hero_DSK_Image.jpg");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-	}
+	} */
+
 	.brand-page-section__top-hero--content{
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
 		flex-wrap: nowrap;
+	}
+
+	.brand-page-section__top-hero--content img{
+
 	}
 
 	.brand-page-section__top-hero--content .headline{
@@ -284,22 +299,9 @@
 
 
 	/* Bottom Hero Section */
-	.brand-page-section__bottom-hero{
-		display: block;
-		background-image: url("https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Bottom_Hero_DSK_Image.jpg");
-		background-size : cover;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
 	.brand-page-section__bottom-hero--content{
-		display: flex;
-		align-items: center;
-		flex-wrap: nowrap;
-		justify-content: flex-end;
-		padding : 20px;
+		position: relative;
 	}
-
 	.brand-page-section__bottom-hero--content .col{
 		width : 50%;
 	}
@@ -308,13 +310,21 @@
 		margin : 0;
 	}
 
-	.brand-page-section__bottom-hero--content .col .tubes__disclaimer{
+	.brand-page-section__bottom-hero--content .disclaimer{
 		font-family: "PetcoCircularTT-Regular", arial !important;
-		font-size: 14px;
+		font-size: 12px;
 		color : #fff;
-		max-width: 590px;
+		max-width: 430px;
 		margin: 0 auto;
-		text-align: center;
+		text-align: left;
+		position: absolute;
+		bottom: 10px;
+		left: 5%;
+	}
+
+	.brand-page-section__bottom-hero--content .disclaimer span{
+		display: block;
+    	padding: 0 0 10px;
 	}
 
 	.m-hide {
@@ -322,6 +332,15 @@
 	}
 	.d-hide{
 		display: none;
+	}
+
+	@media screen and (min-width: 1600px) {
+		.brand-page-section__bottom-hero--content .disclaimer{
+			font-size: 24px;
+			left: 5%;
+			padding: 10px 15px 0;
+			max-width: 45%;
+		}
 	}
 
 	@media screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -343,6 +362,16 @@
 			width : 100%;
 			max-height: 300px;
 		}
+		.brand-page-section__bottom-hero--content .disclaimer{
+			font-size: 10px;
+			left: 5%;
+			padding: 10px 15px 0;
+			width: 45%;
+		}
+
+		.brand-page-section__bottom-hero--content .disclaimer span{
+			padding: 0 0 5px;
+		}
 	}
 	@media screen and (max-width: 767px) {
 		.m-hide {
@@ -356,12 +385,6 @@
 			margin: 0 auto;
 		}
 			/* Top Hero */
-		.brand-page-section__top-hero{
-			background-image: url("https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/top-hero-bg-mobile.jpg");
-			background-size: cover;
-			background-position: center;
-		}
-
 		.brand-page-section__top-hero--content{
 			display: flex;
 			align-items: center;
@@ -473,15 +496,20 @@
 		}
 
 		/* Bottom Hero */
-		.brand-page-section__bottom-hero{
-			background-image: url("https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Bottom_Hero_MOB_Image.jpg");
-		}
 
 		.brand-page-section__bottom-hero--content{
 			align-items: center;
 			justify-content: center;
 			position: relative;
     		min-height: 560px;
+		}
+
+		.brand-page-section__bottom-hero--content .disclaimer{
+			font-size: 10px;
+			position: unset;
+			left: 5%;
+			color: #000000;
+			padding: 10px 15px;
 		}
 
 		.brand-page-section__bottom-hero--content .col{
@@ -568,144 +596,290 @@
 
 	<!-- *** Elanco brand page ***  -->
 	<div class="brand-page-section">
-		<!-- Top hero -->
 		<div class="brand-page-section__top-hero container-fluid">
-			<div class="brand-page-section__top-hero--content container">
-				<div class="col">
-					<div class="headline">PEST-IN-CLASS PROTECTION</div>
-					<div class="products-shots">
-						<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Top_Hero-Products.png" alt="Golden retriever and cat. Seresto, Advantage 2 and K9 Advantix 2 treatment packages. Do not use K9 Advantix 2 on cats.">
-					</div>
-				</div>
-				<div class="col">
-					<div class="logo">
-						<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Top_Hero_Elanco_logo.png" />
-					</div>
-				</div>
-				
-			</div>
+			<img class="m-hide" src="images/POV_DSK.jpg" alt="Vet recommended protection. Seresto, Advantage 2 and K9 Advantix 2 treatment products. Do not use K9 Advantix 2 on cats." />
+			<img class="d-hide" src="images/POV_MOB.jpg" alt="Vet recommended protection. Seresto, Advantage 2 and K9 Advantix 2 treatment products. Do not use K9 Advantix 2 on cats." />
 		</div>
-
-		<!-- Flea & Tick treatments -->
+	
 		<div class="brand-page-section container">
-			<div class="section-title">Flea & tick treatments for pets</div>
+			<div class="section-title">Flea &amp; tick treatments for pets</div>
 			<div class="brand-page-section__flea-tick">
 				<div class="wrapper">
 					<div class="brand-page-section__flea-tick--content">
 						<div class="col">
 							<div class="single-product">
 								<div class="single-product__img">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Tips_treat_icon.png" alt="First aid with paw print icon" />
+									<img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_treat_icon"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_treat_icon"
+										alt="First aid with paw print icon"
+									/>
 								</div>
 								<div class="single-product__head">Treat</div>
-								<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+								<div class="single-product__subhead">
+									Kill pests that are already on your pet and in
+									your home and yard.
+								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="single-product">
 								<div class="single-product__img">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Tips_prevent_icon.png" alt="Shield with heart icon" />
+									<img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_prevent_icon"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_prevent_icon"
+										alt="Shield with heart icon"
+									/>
 								</div>
 								<div class="single-product__head">Prevent</div>
-								<div class="single-product__subhead">Help stop infestations before they occur.</div>
+								<div class="single-product__subhead">
+									Help stop infestations before they occur.
+								</div>
 							</div>
 						</div>
 						<div class="col">
 							<div class="single-product">
 								<div class="single-product__img">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Tips_control_icon.png" alt="Icon of cyclical arrows with a checkmark in the middle" />
+									<img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_control_icon"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Tips_control_icon"
+										alt="Icon of cyclical arrows with a checkmark in the middle"
+									/>
 								</div>
 								<div class="single-product__head">Control</div>
-								<div class="single-product__subhead">Eliminate concerns about worms in your pet.</div>
+								<div class="single-product__subhead">
+									Eliminate concerns about worms in your pet.
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- Top picks to keep them pest-free -->
+	
 		<div class="brand-page-section container">
-			<div class="section-title">Top picks to keep them pest-free</div>
+			<div class="section-title">Top picks to help keep them pest-free</div>
 			<div class="brand-page-section__top-picks">
 				<div class="brand-page-section__top-picks--content">
 					<div class="col">
 						<div class="single-product">
 							<div class="single-product__img">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:product" onclick="clickTrackLink(this);">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/product1.png" alt="" />
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-dogs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:product"
+									onclick="clickTrackLink(this);"
+								>
+									<!-- <img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product1"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product1"
+										alt=""
+									/> -->
+									<img
+										src="images/product1.png"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product1"
+										alt=""
+									/>
 								</a>
 							</div>
 							<div class="single-product__subhead">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:headline" onclick="clickTrackLink(this);">Seresto Flea and Tick Collar for Small Dogs</a>
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-dogs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:headline"
+									onclick="clickTrackLink(this);"
+									>Seresto Elanco Flea and Tick Collar for Small Dogs</a
+								>
 							</div>
-							<div class="single-product__cta"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+							<div class="single-product__cta">
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-dogs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:1:serestofleatickcollarsmalldogs:shopnow"
+									onclick="clickTrackLink(this);"
+									>Shop Now</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="single-product">
 							<div class="single-product__img">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:product" onclick="clickTrackLink(this);">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/product2.png" alt="" />
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-cats"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:product"
+									onclick="clickTrackLink(this);"
+								>
+									<!-- <img
+									src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product2"
+									lazyimg="loaded"
+									data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product2"
+									alt=""> -->
+									<img
+									src="images/product2.png"
+									lazyimg="loaded"
+									data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product2"
+									alt="">
 								</a>
 							</div>
 							<div class="single-product__subhead">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:headline" onclick="clickTrackLink(this);">Seresto Flea and Tick Collar for Cats</a>
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-cats"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:headline"
+									onclick="clickTrackLink(this);"
+									>Seresto Elanco Flea and Tick Collar for Cats</a
+								>
 							</div>
-							<div class="single-product__cta"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+							<div class="single-product__cta">
+								<a
+									href="/shop/en/petcostore/product/seresto-flea-and-tick-collar-for-cats"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:2:serestofleatickcollarcats:shopnow"
+									onclick="clickTrackLink(this);"
+									>Shop Now</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="single-product">
 							<div class="single-product__img">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:product" onclick="clickTrackLink(this);">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/product3.png" alt="" />
+								<a
+									href="/shop/en/petcostore/product/advantage-ii-once-a-month-cat-and-kitten-topical-flea-treatment-over-9-lbs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:product"
+									onclick="clickTrackLink(this);"
+								>
+									<!-- <img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product3"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product3"
+										alt=""
+									/> -->
+									<img
+										src="images/product3.png"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product3"
+										alt=""
+									/>
 								</a>
 							</div>
 							<div class="single-product__subhead">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:headline" onclick="clickTrackLink(this);">Advantage II Once-A-Month Cat & Kitten Topical Flea Treatment</a>
+								<a
+									href="/shop/en/petcostore/product/advantage-ii-once-a-month-cat-and-kitten-topical-flea-treatment-over-9-lbs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:headline"
+									onclick="clickTrackLink(this);"
+									>Advantage II Elanco Once-A-Month Cat & Kitten Topical Flea Treatment Over 9 lbs, Pack of 6</a
+								>
 							</div>
-							<div class="single-product__cta"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+							<div class="single-product__cta">
+								<a
+									href="/shop/en/petcostore/product/advantage-ii-once-a-month-cat-and-kitten-topical-flea-treatment-over-9-lbs"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:3:advantagecatkittenfleatreatment:shopnow"
+									onclick="clickTrackLink(this);"
+									>Shop Now</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="single-product">
 							<div class="single-product__img">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:product" onclick="clickTrackLink(this);">
-									<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/product4.png" alt="" />
+								<a
+									href="/shop/en/petcostore/product/k9-advantix-ii-topical-extra-large-dog-flea-and-tick-treatment"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:product"
+									onclick="clickTrackLink(this);"
+								>
+									<!-- <img
+										src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product4"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product4"
+										alt=""
+									/> -->
+									<img
+										src="images/product4.png"
+										lazyimg="loaded"
+										data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/product4"
+										alt=""
+									/>
 								</a>
 							</div>
 							<div class="single-product__subhead">
-								<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:headline" onclick="clickTrackLink(this);">K9 Advantix II Topical Extra Large Dog Flea & Tick Treatment</a>
+								<a
+									href="/shop/en/petcostore/product/k9-advantix-ii-topical-extra-large-dog-flea-and-tick-treatment"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:headline"
+									onclick="clickTrackLink(this);"
+									>K9 Advantix II Elanco Topical Extra Large Dog Flea & Tick Treatment, Pack of 6</a
+								>
 							</div>
-							<div class="single-product__cta"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:shopnow" onclick="clickTrackLink(this);">Shop Now</a></div>
+							<div class="single-product__cta">
+								<a
+									href="/shop/en/petcostore/product/k9-advantix-ii-topical-extra-large-dog-flea-and-tick-treatment"
+									manual_cm_sp="sponsoredbrandpage:elanco:toppicks:4:k9advantixextralargedogfleatreatment:shopnow"
+									onclick="clickTrackLink(this);"
+									>Shop Now</a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="brand-page-section__top-picks--cta elanco-cta-box">
-				<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:toppicks:5:shopallelancoproducts:shopallproducts" onclick="clickTrackLink(this);">SHOP ALL PRODUCTS</a>
+				<a
+					href="/shop/SearchDisplay?categoryId=&amp;storeId=10151&amp;catalogId=10051&amp;langId=-1&amp;sType=SimpleSearch&amp;resultCatEntryType=2&amp;showResultsPage=true&amp;searchSource=Q&amp;pageView=&amp;beginIndex=0&amp;pageSize=48&amp;fromPageValue=search&amp;searchKeyword=&amp;searchTerm=bayer#{%22contentBeginIndex%22:%220%22,%22productBeginIndex%22:%220%22,%22beginIndex%22:%220%22,%22orderBy%22:%220%22,%22facetId%22:%22%22,%22pageView%22:%22%22,%22resultType%22:%22products%22,%22orderByContent%22:%22%22,%22searchTerm%22:%22bayer%22,%22facet%22:%22%22,%22facetLimit%22:%22%22,%22minPrice%22:%22%22,%22maxPrice%22:%22%22,%22pageSize%22:%2248%22,%22action%22:%22%22,%22physicalStoreId%22:%220000%22,%22pageNumber%22:%221%22,%22rfkFacet%22:%22brands:facet_idSzkgQWR2YW50aXggSUk=,facet_idU2VyZXN0bw==,facet_idQWR2YW50YWdl%22,%22categoryLevel%22:%221%22}"
+					manual_cm_sp="sponsoredbrandpage:elanco:toppicks:5:shopallelancoproducts:shopallproducts"
+					onclick="clickTrackLink(this);"
+					>SHOP ALL PRODUCTS</a
+				>
 			</div>
 		</div>
-
-		<!-- Video Section -->
-		<div class="section-title">Choose the right treatment for your pet</div>
-		<div class="brand-page-section__videos brand-page-section__videos--bg1 container-fluid">
+	
+		<div class="section-title">Which product is right for your pet?</div>
+		<div
+			class="brand-page-section__videos brand-page-section__videos--bg1 container-fluid"
+		>
 			<div class="container">
 				<div class="brand-page-section__videos--content">
 					<div class="col">
 						<div class="text-area">
-							<div class="text-area__logo"><img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/seresto-logo.png" alt="Seresto logo" /></div>
-							<div class="text-area__copy">A flea & tick collar for dogs and cats that provides 8 months of protection.</div>
-							<div class="text-area__cta elanco-cta-box"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:serestovideo:1:serestofleatickcollardogscats:shopseresto" onclick="clickTrackLink(this);">SHOP SERESTO</a></div>
+							<div class="text-area__logo">
+								<img
+									src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/seresto-logo"
+									lazyimg="loaded"
+									data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/seresto-logo"
+									alt="Seresto logo"
+								/>
+							</div>
+							<div class="text-area__copy">
+								A flea &amp; tick collar for dogs and cats that
+								provides 8 months of protection.
+							</div>
+							<div class="text-area__cta elanco-cta-box">
+								<a
+									href="/shop/en/petcostore/brand/seresto"
+									manual_cm_sp="sponsoredbrandpage:elanco:serestovideo:1:serestofleatickcollardogscats:shopseresto"
+									onclick="clickTrackLink(this);"
+									>SHOP SERESTO</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="col">
-						<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:serestovideo:2:playvideoseresto:playvideo" onclick="clickTrackLink(this);">
-							<div class="feature-video">
-								<iframe width="650" height="400" src="https://www.youtube.com/embed/4Dmpn7IeOTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</a>
+						<div
+							class="feature-video"
+							manual_cm_sp="sponsoredbrandpage:elanco:serestovideo:2:playvideoseresto:playvideo"
+							onclick="clickTrackLink(this);"
+						>
+							<iframe
+								width="650"
+								height="400"
+								src="https://www.youtube.com/embed/4Dmpn7IeOTU"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen=""
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -714,66 +888,113 @@
 			<div class="container">
 				<div class="brand-page-section__videos--content">
 					<div class="col">
-						<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:k9advantixvideo:2:playvideoserestok9advantix:playvideo" onclick="clickTrackLink(this);">
-							<div class="feature-video">
-								<iframe width="650" height="400" src="https://www.youtube.com/embed/LaLhdaz1zao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</a>
+						<div
+							class="feature-video"
+							manual_cm_sp="sponsoredbrandpage:elanco:k9advantixvideo:2:playvideoserestok9advantix:playvideo"
+							onclick="clickTrackLink(this);"
+						>
+							<iframe
+								width="650"
+								height="400"
+								src="https://www.youtube.com/embed/k0dYfV8pvd4"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen=""
+							></iframe>
+						</div>
 					</div>
 					<div class="col">
 						<div class="text-area">
-							<div class="text-area__logo"><img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/k9-logo.png" alt="K9 Advantix 2 logo" /></div>
-							<div class="text-area__copy">Monthly spot treatment to kill and repel fleas, ticks and mosquitoes on dogs.</div>
-							<div class="text-area__cta elanco-cta-box"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:k9advantixvideo:1:k9advantixtreatfleasticks:shopk9advantixII" onclick="clickTrackLink(this);">SHOP K9 ADVANTIX II</a></div>
-							<div class="text-area__disclaimer">Do not use K9 Advantix II on cats.</div>
+							<div class="text-area__logo">
+								<img
+									src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/k9-logo"
+									lazyimg="loaded"
+									data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/k9-logo"
+									alt="K9 Advantix 2 logo"
+								/>
+							</div>
+							<div class="text-area__copy">
+								Monthly spot treatment to kill and repel fleas,
+								ticks and mosquitoes on dogs.
+							</div>
+							<div class="text-area__cta elanco-cta-box">
+								<a
+									href="/shop/en/petcostore/brand/k9-advantix-ii"
+									manual_cm_sp="sponsoredbrandpage:elanco:k9advantixvideo:1:k9advantixtreatfleasticks:shopk9advantixII"
+									onclick="clickTrackLink(this);"
+									>SHOP K9 ADVANTIX II</a
+								>
+							</div>
+							<div class="text-area__disclaimer">
+								Do not use K9 Advantix II on cats.
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="brand-page-section__videos brand-page-section__videos--bg2 container-fluid">
+		<div
+			class="brand-page-section__videos brand-page-section__videos--bg2 container-fluid"
+		>
 			<div class="container">
 				<div class="brand-page-section__videos--content">
 					<div class="col">
 						<div class="text-area">
-							<div class="text-area__logo"><img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Advantage2-logo.png" alt="Advantage 2 logo" /></div>
-							<div class="text-area__copy">Applied monthly to kill adult fleas, eggs and larvae on cats and dogs.</div>
-							<div class="text-area__cta elanco-cta-box"><a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:advantagevideo:1:advantagefleaeggslarvaetreatmentcatsdogs:shopadvantageII" onclick="clickTrackLink(this);">SHOP ADVANTAGE II</a></div>
+							<div class="text-area__logo">
+								<img src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Advantage2-logo" 
+								lazyimg="loaded" data-src="https://assets.petco.com/petco/image/upload/f_auto,q_auto/Advantage2-logo" 
+								alt="Advantage 2 logo">
+							</div>
+							<div class="text-area__copy">
+								Applied monthly to kill adult fleas, eggs and larvae
+								on cats and dogs.
+							</div>
+							<div class="text-area__cta elanco-cta-box">
+								<a
+									href="/shop/en/petcostore/brand/advantage"
+									manual_cm_sp="sponsoredbrandpage:elanco:advantagevideo:1:advantagefleaeggslarvaetreatmentcatsdogs:shopadvantageII"
+									onclick="clickTrackLink(this);"
+									>SHOP ADVANTAGE II</a
+								>
+							</div>
 						</div>
 					</div>
 					<div class="col">
-						<a href="/shop/en/petcostore" manual_cm_sp="sponsoredbrandpage:elanco:advantagevideo:2:playvideoadvantage:playvideo" onclick="clickTrackLink(this);">
-							<div class="feature-video">
-								<iframe width="650" height="400" src="https://www.youtube.com/embed/k0dYfV8pvd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</a>
+						<div
+							class="feature-video"
+							manual_cm_sp="sponsoredbrandpage:elanco:advantagevideo:2:playvideoadvantage:playvideo"
+							onclick="clickTrackLink(this);"
+						>
+							<iframe
+								width="650"
+								height="400"
+								src="https://www.youtube.com/embed/LaLhdaz1zao"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen=""
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- Bottom Hero -->
-		<div class="section-title">Help protect your pet wherever they roam</div>
+	
+		<div class="section-title">Premium pest protection</div>
+		<div class="section-sub-title">Help protect your pet wherever they roam.</div>
 		<div class="brand-page-section__bottom-hero container-fluid">
-			<div class="container">
-				<div class="brand-page-section__bottom-hero--content">
-					
-					<div class="col">
-						<div class="tubes">
-							<div class="tubes__recom">
-								<img class="m-hide" src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Bottom_Hero_DSK_Veterinarian_Recom.png" alt="Veterinarian recommended" />
-								<img class="d-hide" src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Bottom_Hero_MOB_Veterinarian_Recom.png" alt="Veterinarian recommended" />
-							</div>
-							<img src="https://citrusad-bbby.github.io/PetcoBrandPage-Elanco/images/Bottom_Hero_Products.png" alt="Veterinarian recommended. Copyright 2021 Elanco. Advantage, K9 Advantix and Seresto are trademarks of Elanco or affiliates." />
-							<div class="tubes__disclaimer">
-								Do not use K9 Advantix II on cats. PM-US-21-1283 <br/> &copy;2021 Elanco. Advantage, K9 Advantix, and Seresto are trademarks of Elanco or its affiliates.
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="brand-page-section__bottom-hero--content">
+				<img class="m-hide" src="images/Bottom_Hero_DSK.jpg" alt="Image of cat, dog, and assorted Elanco pest treatment products." />
+				<img class="d-hide" src="images/Bottom_Hero_MOB.jpg" alt="Image of cat, dog, and assorted Elanco pest treatment products." />
+				<p class="disclaimer">
+					<span>Do not use K9 Advantix II on cats.</span>
+
+©2022 Elanco or its affiliates. Advantage, Elanco, K9 Advantix, Seresto, and the diagonal bar logo are trademarks of Elanco or its affiliates. PM-US-21-2749 
+				</p>
 			</div>
 		</div>
-
 	</div>
+	
 </body>
 </html>
